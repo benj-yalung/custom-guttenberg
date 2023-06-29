@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "settings": {
+    "appearanceTools": true,
+    "color": {
+      "custom": false,
+      "palette": [
+        {
+          "name": "Violet",
+          "color": "#233A96",
+          "slug": "violet"
+        },
+        {
+          "name": "Orange",
+          "color": "#F58220",
+          "slug": "orange"
+        },
+        {
+          "name": "Ocean",
+          "color": "#00274E",
+          "slug": "ocean"
+        },
+        {
+          "name": "Sunny",
+          "color": "#ED9951",
+          "slug": "sunny"
+        },
+        {
+          "name": "Black",
+          "color": "#222222",
+          "slug": "black"
+        },
+        {
+          "name": "White",
+          "color": "#ffffff",
+          "slug": "white"
+        },
+        {
+          "name": "Gray",
+          "color": "#5F6D7E",
+          "slug": "gray"
+        },
+        {
+          "name": "Sand",
+          "color": "#F5F5F5",
+          "slug": "sand"
+        },
+        {
+          "name": "Coral",
+          "color": "#E8EDF3",
+          "slug": "coral"
+        },
+        {
+          "name": "Pluto",
+          "color": "#DAE0E6",
+          "slug": "pluto"
+        },
+        {
+          "name": "Orbit",
+          "color": "#EAEBF0",
+          "slug": "orbit"
+        }
+      ]
+    }
+  }
+}

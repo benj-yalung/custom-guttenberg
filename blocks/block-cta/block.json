@@ -1,0 +1,21 @@
+{
+  "name": "my-custom/call-to-action",
+  "title": "CTA",
+  "description": "A custom call to action block.",
+  "style": [ "file:./block-cta.scss" ],
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["call to action", "cta", "call", "action"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "block-cta.php"
+  },
+  "align": "full",
+  "supports": {
+    "color": {
+      "background": true,
+      "text": true,
+      "link": false
+    }
+  }
+}

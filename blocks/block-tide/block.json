@@ -1,0 +1,21 @@
+{
+  "name": "my-custom/tide",
+  "title": "Tide",
+  "description": "A custom Tide Forecast block",
+  "style": [ "file:./block-tide.scss" ],
+  "icon": "admin-comments",
+  "apiVersion": 2,
+  "keywords": ["tide", "forecast", "tide forecast"],
+  "acf": {
+      "mode": "preview",
+      "renderTemplate": "block-tide.php"
+  },
+  "align": "full",
+  "supports": {
+    "color": {
+      "background": true,
+      "text": true,
+      "link": false
+    }
+  }
+}
