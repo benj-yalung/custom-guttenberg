@@ -78,19 +78,21 @@ $result = json_decode( $response_body );
 $low_tide = [];
 $high_tide = [];
 
-foreach ( $result->extremes as $extreme ) {
-  if ( $extreme->state === 'LOW TIDE' && $low_tide === [] ) {
-    $low_tide['height'] = number_format( (float) $extreme->height, 2, '.', '' ) . $result->unit;
-    $date_time = date_create( $extreme->datetime );
-    $low_tide['time'] = date_format( $date_time, 'g:ia' );
-    $low_tide['title'] = 'Low Tide';
-  }
+if(isset($result->extremes)) {
+  foreach ( $result->extremes as $extreme ) {
+    if ( $extreme->state === 'LOW TIDE' && $low_tide === [] ) {
+      $low_tide['height'] = number_format( (float) $extreme->height, 2, '.', '' ) . $result->unit;
+      $date_time = date_create( $extreme->datetime );
+      $low_tide['time'] = date_format( $date_time, 'g:ia' );
+      $low_tide['title'] = 'Low Tide';
+    }
 
-  if ( $extreme->state === 'HIGH TIDE' && $high_tide === [] ) {
-    $high_tide['height'] = number_format( (float) $extreme->height, 2, '.', '' ) . $result->unit;
-    $date_time = date_create( $extreme->datetime );
-    $high_tide['time'] = date_format( $date_time, 'g:ia' );
-    $high_tide['title'] = 'High Tide';
+    if ( $extreme->state === 'HIGH TIDE' && $high_tide === [] ) {
+      $high_tide['height'] = number_format( (float) $extreme->height, 2, '.', '' ) . $result->unit;
+      $date_time = date_create( $extreme->datetime );
+      $high_tide['time'] = date_format( $date_time, 'g:ia' );
+      $high_tide['title'] = 'High Tide';
+    }
   }
 }
 
@@ -102,11 +104,11 @@ foreach ( $result->extremes as $extreme ) {
     <div class="sub_title"><?php echo esc_html( $current_year ); ?></div>
   </div>
   <div class="box_wrapper <?php echo esc_attr( $text_color ) ?>">
-    <div class="title"><?php echo esc_html( $high_tide['height'] ) ?> | <?php echo esc_html( $high_tide['time'] ); ?></div>
-    <div class="sub_title"><?php echo esc_html( $high_tide['title'] ); ?></div>
+    <div class="title"><?php echo esc_html( $high_tide['height'] ?? '0.00m' ) ?> | <?php echo esc_html( $high_tide['time'] ?? '12:00am' ); ?></div>
+    <div class="sub_title"><?php echo esc_html( $high_tide['title'] ?? 'High Tide' ); ?></div>
   </div>
   <div class="box_wrapper <?php echo esc_attr( $text_color ) ?>">
-    <div class="title"><?php echo esc_html( $low_tide['height'] ) ?> | <?php echo esc_html( $low_tide['time'] ); ?></div>
-    <div class="sub_title"><?php echo esc_html( $low_tide['title'] ); ?></div>
+    <div class="title"><?php echo esc_html( $low_tide['height'] ?? '0.00m' ) ?> | <?php echo esc_html( $low_tide['time'] ?? '12:00pm' ); ?></div>
+    <div class="sub_title"><?php echo esc_html( $low_tide['title'] ?? 'Low Tide' ); ?></div>
   </div>
 </div>

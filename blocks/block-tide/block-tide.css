@@ -1,0 +1,24 @@
+.tide-block {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 80px;
+  max-width: 1250px !important;
+  background: #F5F5F5;
+}
+
+.box_wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  font-family: 'Inter';
+  font-weight: 600;
+}
+
+.sub_title {
+  font-size: 16px;
+  font-family: 'Inter';
+  font-weight: 300;
+  line-height: 140%;
+}

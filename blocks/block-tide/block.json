@@ -2,7 +2,7 @@
   "name": "my-custom/tide",
   "title": "Tide",
   "description": "A custom Tide Forecast block",
-  "style": [ "file:./block-tide.scss" ],
+  "style": [ "file:./block-tide.css" ],
   "icon": "admin-comments",
   "apiVersion": 2,
   "keywords": ["tide", "forecast", "tide forecast"],
