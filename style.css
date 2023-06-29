@@ -11,8 +11,9 @@ License URI:  http://www.gnu.org/licenses/gpl-2.0.html
 Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
 Text Domain:  twentytwentytwochild
 */
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @font-face {
   font-family: 'Inter';
-  src: url('assets/fonts/Inter/static/Inter-Regular.ttf');
+  src: url('/wp-content/themes/fonts/Inter/static/Inter-Regular.ttf');
 }
