@@ -55,12 +55,12 @@
   text-decoration: none;
 }
 
-.primary {
+.action.primary {
   background: #273D98;
   color: #ffffff;
 }
 
-.secondary {
+.action.secondary {
   border: 1px solid #DAE0E6;
 }
 
